@@ -14,12 +14,12 @@
 						<div class="popup_tel_form">
 								<a class="close" href="#">&times;</a>
 								<h3>Заказать звонок!!</h3>
-								<form>
+								<form id="tel_form">
 									<label for="name">Введите имя:</label>
 									<input type="text" id="name" required>
 									<label for="tel">Введите номер телефона:</label>
 									<input id="tel" type="tel" name="number" required>
-									<button class="popup_tel_form_button">Заказать звонок</button>
+									<button class="popup_tel_form_button" type="button" onclick="validateForm('#popup_container_tel','#tel_form')">Заказать звонок</button>
 								</form>
 						</div>
 					</div>
@@ -27,14 +27,14 @@
 							<div class="popup_email_form">
 								<a class="close" href="#" type="button">&times;</a>
 								<h3>Контактная информация:</h3>
-								<form>
-									<label for="name">Введите имя:</label>
-									<input id="name" type="text" class="name" required>
-									<label for="tel">Введите номер телефона:</label>
-									<input id="tel" type="tel" name="number" required>
-									<label for="mail">Введите адрес электронной почты:</label>
-									<input id="mail" type="email" required>
-									<button class="popup_email_form_button" type="button">Заказать звонок</button>
+								<form id="email_form">
+									<label for="form_email_name">Введите имя:</label>
+									<input id="form_email_name" type="text" class="name" required>
+									<label for="form_email_tel">Введите номер телефона:</label>
+									<input id="form_email_tel" type="tel" name="number" required>
+									<label for="form_email">Введите адрес электронной почты:</label>
+									<input id="form_email" type="email" required>
+									<button class="popup_email_form_button" type="button" onclick="validateForm('#popup_container_email','#email_form')">Заказать звонок</button>
 								</form>
 							</div>
 						</div>
@@ -151,7 +151,7 @@
 								</div>
 								<div>
 									<a href="https://vk.com/" class="soc-button vk"> </a>
-									<a href="www.facebook.com/" class="soc-button fb"> </a>
+									<a href="https://www.facebook.com/" class="soc-button fb"> </a>
 									<a href="https://twitter.com/?lang=ru" class="soc-button tw"> </a>
 									<a href="https://www.instagram.com/?hl=ru" class="soc-button in"> </a>
 								</div>
