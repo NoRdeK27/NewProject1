@@ -1,19 +1,44 @@
+function validateForm(popup_container_tel, tel_form){	
+		const form = $('#' + 'tel_form')[0]; // Форма, найденная по ID
+   		const popup = $('#' + 'popup_container_tel'); // Попап, найденный по ID
+
+   		if (form.checkValidity())  // Если проверка формы на валидность прошла
+      		popup.hide(); // закрываем попап
+  		 else  // иначе
+      		form.reportValidity() // Выдаём сообщение об ошибке
+};
+
+	function validateForm(popup_container_email, email_form){	
+		const form = $('#' + 'email_form')[0]; // Форма, найденная по ID
+   		const popup = $('#' + 'popup_container_email'); // Попап, найденный по ID
+
+   		if (form.checkValidity())  // Если проверка формы на валидность прошла
+      		popup.hide(); // закрываем попап
+  		 else  // иначе
+      		form.reportValidity() // Выдаём сообщение об ошибке
+};
+
+		
+	
+
 $(function () {
 	//script for popups
 	$('.header_right-column_tel_buttom').click(function () {
-		$('#popup_container_tel').show().fadeIn(3000);				
+		$('#popup_container_tel').show();
+		$("html,body").css("overflow","hidden");				
 	});	
 	$('.close').click(function () {
-		$(this).parent().fadeOut(1500);
-		$('#popup_container_tel').remove();
+		$("html,body").css("overflow","visible");
+		$('#popup_container_tel').hide();
 	});
 
 	$('.button_content').click(function(){
 		$('#popup_container_email').show();
+		$("html,body").css("overflow","hidden");
 	});
 		$('.close').click(function () {
-		$(this).parent().fadeOut(1500);
-		$('#popup_container_email').remove();
+		$('#popup_container_email').hide();
+		$("html,body").css("overflow", "visible");
 	});
 
 $(document).ready(function($){
