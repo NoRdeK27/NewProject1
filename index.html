@@ -18,7 +18,7 @@
 									<label for="form_tel_name">Введите имя:</label>
 									<input type="text" id="form_tel_name" required>
 									<label for="form_tel">Введите номер телефона:</label>
-									<input id="form_tel" type="tel" name="number" required>
+									<input id="form_tel" type="tel" name="number" pattern="[0-9]{10}" required required>
 									<button class="popup_tel_form_button" type="button" onclick="validateForm('#popup_container_tel','#tel_form')">Заказать звонок</button>
 								</form>
 						</div>
@@ -31,7 +31,7 @@
 									<label for="form_email_name">Введите имя:</label>
 									<input id="form_email_name" type="text" class="name" required>
 									<label for="form_email_tel">Введите номер телефона:</label>
-									<input id="form_email_tel" type="tel" name="number" required>
+									<input id="form_email_tel" type="tel" name="number" pattern="[0-9]{10}" required required>
 									<label for="form_email">Введите адрес электронной почты:</label>
 									<input id="form_email" type="email" required>
 									<button class="popup_email_form_button" type="button" onclick="validateForm('#popup_container_email','#email_form')">Заказать звонок</button>
