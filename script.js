@@ -1,22 +1,14 @@
 	function 
-	validateForm(popup_container_tel, tel_form,popup_container_email, email_form){	
-		const form_tel = $('#' + 'tel_form',)[0]; // Форма, найденная по ID
-   		const popup_tel = $('#' + 'popup_container_tel'); // Попап, найденный по ID
-   		const form = $('#' + 'email_form')[0]; // Форма, найденная по ID
-   		const popup = $('#' + 'popup_container_email'); // Попап, найденный по ID
+	validateForm(popupID, formID,){	
+		const form = $(formID)[0]; // Форма, найденная по ID
+		const popup = $(popupID); // Попап, найденный по ID
 
-   		if (form_tel.checkValidity())  // Если проверка формы на валидность прошла
-      		popup_tel.hide(); // закрываем попап
-  		 else  // иначе
-      		form_tel.reportValidity() // Выдаём сообщение об ошибке
-     
-      	if (form.checkValidity())  // Если проверка формы на валидность прошла
-      		popup.hide(); // закрываем попап
+		if (form.checkValidity())  // Если проверка формы на валидность прошла
+			popup.hide(); // закрываем попап
   		else  // иначе
-      		form.reportValidity() // Выдаём сообщение об ошибке
-
-
+			form.reportValidity() // Выдаём сообщение об ошибке
 };
+
 
 
 		
