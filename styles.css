@@ -121,10 +121,12 @@ body{
 
 					.close {
 						height: 45px;
+						width: 45px;
 						position: relative;
 						text-align: right;
 						color: #f91482;
 						font-size: 50px;
+						float: right;
 					}
 
 					#popup_container_tel {
@@ -691,7 +693,10 @@ body{
 							margin: 0 auto;
 						}
 						#font {
-							}	
+							}
+						.bg_symbol_item4{
+							left:33%;
+						}	
 						}
 						@media (max-width: 977px){
 							.bg_text{
@@ -812,7 +817,8 @@ body{
 						}
 
 					@media (max-width: 330px){
-						#bg {
+						.bg {
+							height: 480px;
 													}
 					}
 
